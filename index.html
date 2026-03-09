@@ -4,216 +4,259 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags -->
-    <title>Yasri Rifa'i | Santri Mandiri Travel Pangandaran</title>
-    <meta name="description" content="Layanan Travel Santri Mandiri oleh Yasri Rifa'i (Santri Mandiri). Melayani rute populer Pangandaran ke Bandung, Jakarta, dan Bandara Kertajati. Jemput di pintu, antar sampai tujuan dengan amanah.">
-    <meta name="keywords" content="Santri Mandiri, Yasri Rifa'i, Santri Mandiri, Travel Pangandaran Bandung, Travel Pangandaran Jakarta, Travel Bandara Kertajati, Sewa Mobil Pangandaran">
+    <!-- SEO META DATA -->
+    <title>Santri Mandiri | Yasri Rifa'i | SM Trans Travel Pangandaran</title>
+    <meta name="description" content="Santri Mandiri oleh Yasri Rifa'i menghadirkan SM Trans. Layanan Travel Amanah rute Pangandaran-Bandung, Pangandaran-Jakarta, dan Bandara Kertajati (BIJB). Jemput di rumah, antar sampai tujuan.">
+    <meta name="keywords" content="Santri Mandiri, Yasri Rifa'i, SM Trans, Travel Pangandaran Bandung, Travel Pangandaran Jakarta, Travel Bandara Kertajati, Travel Pangandaran Bekasi, Travel Pangandaran Tangerang">
     <meta name="author" content="Yasri Rifa'i">
     
-    <!-- Open Graph / Facebook / WhatsApp -->
-    <meta property="og:type" content="website">
+    <!-- Open Graph (WhatsApp, Facebook sharing) -->
+   <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.facebook.com/share/18VNf2oFfE/?mibextid=wwXIfr">
     <meta property="og:title" content="Yasri Rifa'i | Travel Amanah & Terpercaya.">
     <meta property="og:description" content="Pangandaran - Bandung - Jabodetabek - Kertajati. Pesan sekarang melalui WhatsApp.">
     <meta property="og:image" content="https://placehold.co/1200x630/0f172a/ffffff?text=JM+Trans+Pangandaran">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Santri Mandiri | Yasri Rifa'i | Santri Mandiri">
-    <meta property="twitter:description" content="Layanan transportasi amanah dari Pangandaran ke berbagai rute besar.">
 
+    <!-- CSS & Frameworks -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Quicksand:wght@500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
         
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            scroll-behavior: smooth;
+            background-color: #f8fafc;
         }
 
-        .heading-font {
-            font-family: 'Quicksand', sans-serif;
+        .gradient-text {
+            background: linear-gradient(to right, #3b82f6, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .hero-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+        .hero-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
         }
 
-        .wa-float {
+        .route-card {
+            transition: all 0.3s ease;
+        }
+
+        .route-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .wa-button {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            z-index: 50;
-            background: #25d366;
+            z-index: 100;
+            background-color: #25d366;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 50px;
-            font-weight: 700;
-            font-size: 14px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
             display: flex;
             align-items: center;
-            gap: 8px;
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
+            gap: 10px;
+            font-weight: 700;
             text-decoration: none;
-        }
-
-        .compact-card {
-            transition: all 0.2s ease;
-            border: 1px solid #e2e8f0;
-        }
-        
-        .compact-card:hover {
-            border-color: #3b82f6;
-            background-color: #f8fafc;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="antialiased">
 
-    <!-- WhatsApp Floating -->
-    <a href="https://wa.me/6282315066201" class="wa-float">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6282315066201" class="wa-button">
         <i class="fab fa-whatsapp text-xl"></i>
-        <span>Pesan WA</span>
+        <span>Pesan Sekarang</span>
     </a>
 
-    <!-- Hero Section (Minimalist - No Big Image) -->
-    <section class="hero-bg pt-24 pb-20 px-6">
-        <div class="max-w-4xl mx-auto text-center relative z-10 text-white">
-            <div class="inline-block bg-emerald-600/20 text-emerald-400 border border-emerald-600/30 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
-                Santri Mandiri: Yasri Rifa'i
+    <!-- Header / Navbar -->
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="text-xl font-extrabold text-slate-900 tracking-tighter">SM Trans</span>
+                <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest">Santri Mandiri</span>
             </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 heading-font leading-tight">
-             <br><span class="text-blue-400 italic">Travel Amanah & Terpercaya</span>
+            <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-600">
+                <a href="#rute" class="hover:text-blue-600 transition">Rute</a>
+                <a href="#layanan" class="hover:text-blue-600 transition">Layanan</a>
+                <a href="#kontak" class="hover:text-blue-600 transition">Kontak</a>
+            </div>
+            <a href="tel:082315066201" class="text-slate-900 font-bold text-sm bg-slate-100 px-4 py-2 rounded-lg">
+                <i class="fas fa-phone-alt mr-2"></i> 0823-1506-6201
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                Travel Amanah <br><span class="text-blue-400">Pangandaran - Jakarta - Bandung</span>
             </h1>
-            <p class="text-base md:text-lg text-slate-300 mb-10 leading-relaxed max-w-2xl mx-auto">
-                Layanan transportasi dengan integritas santri. Menjemput depan pintu, mengantar sampai tujuan dengan selamat.
+            <p class="text-slate-300 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+                Di bawah bimbingan <strong>Yasri Rifa'i</strong>, SM Trans mengedepankan nilai kejujuran dan pelayanan santri untuk kenyamanan perjalanan Anda.
             </p>
-            <div class="flex gap-4 justify-center font-bold text-sm">
-                <a href="#rute" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl transition flex items-center gap-2">
-                    <i class="fas fa-map-marked-alt"></i> Cek Rute
+            <div class="flex flex-wrap justify-center gap-4 font-bold">
+                <a href="#rute" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl transition shadow-lg shadow-blue-500/30">
+                    Lihat Rute Tersedia
                 </a>
-                <a href="#layanan" class="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl transition">
-                    Layanan
+                <a href="https://wa.me/6282315066201" class="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl transition border border-white/20">
+                    Konsultasi Gratis
                 </a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Layanan Kami (Compact Version) -->
-    <section id="layanan" class="py-16 px-6 bg-white">
-        <div class="max-w-5xl mx-auto">
-            <div class="mb-10 text-center md:text-left flex flex-col md:flex-row md:items-center justify-between gap-4">
-                <div>
-                    <h2 class="text-2xl font-black heading-font text-slate-900 uppercase tracking-tight">Produk Layanan</h2>
-                    <p class="text-slate-500 text-xs">Pilihan transportasi sesuai kebutuhan Anda</p>
-                </div>
-                <div class="h-px bg-slate-100 flex-grow hidden md:block mx-8"></div>
+    <!-- Rute List -->
+    <section id="rute" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-4 uppercase tracking-tight">Rute Utama & Jadwal</h2>
+                <div class="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
             </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-                <!-- Layanan 1 -->
-                <div class="compact-card p-4 rounded-2xl bg-white text-center">
-                    <span class="text-3xl mb-2 block">🚐</span>
-                    <h3 class="text-[10px] font-black uppercase tracking-tighter text-slate-700">Travel Reguler</h3>
-                </div>
 
-                <!-- Layanan 2 -->
-                <div class="compact-card p-4 rounded-2xl bg-white text-center">
-                    <span class="text-3xl mb-2 block">🚗</span>
-                    <h3 class="text-[10px] font-black uppercase tracking-tighter text-slate-700">Charter Mobil</h3>
-                </div>
-
-                <!-- Layanan 3 -->
-                <div class="compact-card p-4 rounded-2xl bg-white text-center">
-                    <span class="text-3xl mb-2 block">✈️</span>
-                    <h3 class="text-[10px] font-black uppercase tracking-tighter text-slate-700">Antar Bandara</h3>
-                </div>
-
-                <!-- Layanan 4 -->
-                <div class="compact-card p-4 rounded-2xl bg-white text-center">
-                    <span class="text-3xl mb-2 block">📦</span>
-                    <h3 class="text-[10px] font-black uppercase tracking-tighter text-slate-700">Kirim Paket</h3>
-                </div>
-
-                <!-- Layanan 5 -->
-                <div class="compact-card p-4 rounded-2xl bg-white text-center">
-                    <span class="text-3xl mb-2 block">👥</span>
-                    <h3 class="text-[10px] font-black uppercase tracking-tighter text-slate-700">Rombongan</h3>
-                </div>
-
-                <!-- Layanan 6 -->
-                <div class="compact-card p-4 rounded-2xl bg-white text-center">
-                    <span class="text-3xl mb-2 block">📍</span>
-                    <h3 class="text-[10px] font-black uppercase tracking-tighter text-slate-700">Layanan Drop</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rute Populer -->
-    <section id="rute" class="py-16 px-6 bg-slate-50">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-2xl font-black heading-font mb-8 text-center md:text-left uppercase">Rute Populer</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Rute 1 -->
-                <div class="bg-white rounded-2xl p-6 border border-slate-200">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-route"></i>
-                        </div>
-                        <span class="text-[9px] font-bold bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded uppercase">Tersedia</span>
+                <div class="route-card bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-map-marker-alt text-xl"></i>
                     </div>
-                    <p class="text-lg font-black heading-font mb-4">Pangandaran <i class="fas fa-arrow-right text-blue-500 text-xs mx-1"></i> Bandung</p>
-                    <a href="https://wa.me/6282315066201?text=Booking%20Travel%20Pangandaran-Bandung" class="w-full bg-slate-900 text-white text-xs py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-blue-600 transition">
-                        <i class="fab fa-whatsapp"></i> Booking
-                    </a>
+                    <h3 class="text-xl font-extrabold mb-2">Pangandaran - Bandung</h3>
+                    <p class="text-slate-500 text-sm mb-6">Pemberangkatan pagi & malam. Lewat jalur utama dengan driver berpengalaman.</p>
+                    <ul class="space-y-3 mb-8 text-sm font-semibold text-slate-700">
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Door to Door Service</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Full AC & Reclining Seat</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Driver Ramah (Santri)</li>
+                    </ul>
+                    <a href="https://wa.me/6282315066201?text=Halo%20JM%20Trans,%20mau%20pesan%20rute%20Pangandaran%20Bandung" class="block text-center bg-slate-900 text-white py-4 rounded-2xl hover:bg-blue-600 transition">Booking Sekarang</a>
                 </div>
 
                 <!-- Rute 2 -->
-                <div class="bg-white rounded-2xl p-6 border border-slate-200">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-city"></i>
-                        </div>
-                        <span class="text-[9px] font-bold bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded uppercase">Tersedia</span>
+                <div class="route-card bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-city text-xl"></i>
                     </div>
-                    <p class="text-lg font-black heading-font mb-4">Pangandaran <i class="fas fa-arrow-right text-blue-500 text-xs mx-1"></i> Jabodetabek</p>
-                    <a href="https://wa.me/6282315066201?text=Booking%20Travel%20Pangandaran-Jabodetabek" class="w-full bg-slate-900 text-white text-xs py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-blue-600 transition">
-                        <i class="fab fa-whatsapp"></i> Booking
-                    </a>
+                    <h3 class="text-xl font-extrabold mb-2">Pangandaran - Jakarta</h3>
+                    <p class="text-slate-500 text-sm mb-6">Melayani wilayah Bekasi, Tangerang, Depok. Perjalanan nyaman via tol.</p>
+                    <ul class="space-y-3 mb-8 text-sm font-semibold text-slate-700">
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Area Jabodetabek</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Armada Terawat</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Tepat Waktu</li>
+                    </ul>
+                    <a href="https://wa.me/6282315066201?text=Halo%20JM%20Trans,%20mau%20pesan%20rute%20Pangandaran%20Jakarta" class="block text-center bg-slate-900 text-white py-4 rounded-2xl hover:bg-blue-600 transition">Booking Sekarang</a>
                 </div>
 
                 <!-- Rute 3 -->
-                <div class="bg-white rounded-2xl p-6 border border-slate-200">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-plane"></i>
-                        </div>
-                        <span class="text-[9px] font-bold bg-amber-50 text-amber-600 px-2 py-0.5 rounded uppercase">Spesial</span>
+                <div class="route-card bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+                    <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-plane-departure text-xl"></i>
                     </div>
-                    <p class="text-lg font-black heading-font mb-4">Pangandaran <i class="fas fa-arrow-right text-blue-500 text-xs mx-1"></i> Kertajati</p>
-                    <a href="https://wa.me/6282315066201?text=Booking%20Bandara%20Kertajati" class="w-full bg-slate-900 text-white text-xs py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-blue-600 transition">
-                        <i class="fab fa-whatsapp"></i> Booking
-                    </a>
+                    <h3 class="text-xl font-extrabold mb-2">Pangandaran - Kertajati</h3>
+                    <p class="text-slate-500 text-sm mb-6">Antar jemput khusus Bandara BIJB Kertajati. Aman mengejar jadwal penerbangan.</p>
+                    <ul class="space-y-3 mb-8 text-sm font-semibold text-slate-700">
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Drop Off Bandara</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Bagasi Luas</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Antar Jemput</li>
+                    </ul>
+                    <a href="https://wa.me/6282315066201?text=Halo%20JM%20Trans,%20mau%20pesan%20rute%20Pangandaran%20Kertajati" class="block text-center bg-slate-900 text-white py-4 rounded-2xl hover:bg-blue-600 transition">Booking Sekarang</a>
                 </div>
-               
             </div>
         </div>
     </section>
 
-    <!-- Footer Simple -->
-    <footer class="bg-white py-12 px-6 border-t border-slate-100 text-center">
-        <p class="text-2xl font-black italic text-blue-700 heading-font mb-2"></p>
-        <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest mb-6">Pangandaran • 0823-1506-6201</p>
-        <div class="flex justify-center gap-4 mb-8 text-slate-400">
-             <i class="fab fa-whatsapp"></i>
-             <i class="fab fa-instagram"></i>
-             <i class="fab fa-facebook"></i>
+    <!-- Mengapa Memilih Kami -->
+    <section class="bg-slate-900 py-20 px-6 text-white overflow-hidden relative">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-blue-400 font-bold uppercase tracking-widest text-xs">Nilai Santri Mandiri</span>
+                <h2 class="text-3xl font-extrabold mt-4 mb-8 leading-tight">Perjalanan Bukan Sekadar Berpindah Tempat, Tapi Soal Kepercayaan.</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 flex-shrink-0 bg-white/10 rounded-lg flex items-center justify-center text-blue-400">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Keamanan (Safety First)</h4>
+                            <p class="text-slate-400 text-sm">Unit kendaraan selalu dalam kondisi prima dengan pengecekan rutin berkala.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 flex-shrink-0 bg-white/10 rounded-lg flex items-center justify-center text-blue-400">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Integritas (Amanah)</h4>
+                            <p class="text-slate-400 text-sm">Dikelola oleh Santri Mandiri, kami memastikan layanan yang jujur tanpa biaya tersembunyi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="bg-blue-600/20 absolute inset-0 blur-3xl -z-10 rounded-full"></div>
+                <div class="p-8 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-sm">
+                    <p class="italic text-slate-300 mb-6 font-medium">"Kami berkomitmen membangun ekonomi mandiri santri melalui sektor transportasi. Setiap perjalanan Anda mendukung keberlanjutan kemandirian kami."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center font-extrabold">YR</div>
+                        <div>
+                            <p class="font-bold">Yasri Rifa'i</p>
+                            <p class="text-xs text-slate-500 font-semibold uppercase">Founder SM Trans</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p class="text-[9px] text-slate-300 font-bold uppercase tracking-[0.2em]">&copy; 2024 Yasri Rifa'i - Santri Mandiri</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-20 pb-10 px-6 border-t border-slate-100">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="md:col-span-2">
+                <h3 class="text-2xl font-extrabold mb-4">SM Trans</h3>
+                <p class="text-slate-500 text-sm leading-relaxed max-w-sm">
+                    Layanan transportasi darat di bawah manajemen Santri Mandiri oleh Yasri Rifa'i. Kami melayani travel reguler, kirim paket cepat, dan charter mobil area Jawa Barat & Jakarta.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-extrabold text-slate-900 mb-6 uppercase text-xs tracking-widest">Kontak Kami</h4>
+                <ul class="text-sm text-slate-600 space-y-4">
+                    <li><i class="fas fa-phone mr-2 text-blue-600"></i> 0823-1506-6201</li>
+                    <li><i class="fab fa-whatsapp mr-2 text-green-500"></i> Hubungi WhatsApp</li>
+                    <li><i class="fas fa-map-marker-alt mr-2 text-red-500"></i> Pangandaran, Jawa Barat</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-extrabold text-slate-900 mb-6 uppercase text-xs tracking-widest">Media Sosial</h4>
+                <div class="flex gap-4 text-slate-400">
+                    <a href="#" class="hover:text-blue-600 transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="#" class="hover:text-pink-600 transition"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-twitter text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto pt-8 border-t border-slate-50 text-center">
+            <p class="text-xs text-slate-400 font-bold uppercase tracking-[0.3em]">
+                &copy; 2024 Santri Mandiri | Yasri Rifa'i | SM Trans
+            </p>
+        </div>
     </footer>
 
+    <script>
+        // Smooth scroll untuk navigasi
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
