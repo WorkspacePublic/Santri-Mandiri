@@ -33,6 +33,61 @@
         html {
             scroll-behavior: smooth;
         }
+        /* Gaya Footer Profesional */
+        .footer-portfolio {
+            background-color: #0f172a; /* Biru gelap elegan */
+            color: #f8fafc;
+            padding: 40px 20px;
+            text-align: center;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            border-top: 4px solid #10b981; /* Aksen hijau emerald */
+        }
+
+        .footer-portfolio p {
+            margin: 0 0 15px 0;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #94a3b8;
+        }
+
+        .wa-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: transparent;
+            color: #10b981;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 12px 28px;
+            border: 2px solid #10b981;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .wa-link-btn:hover {
+            background-color: #10b981;
+            color: #ffffff;
+            box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #475569;
+            display: block;
+        }
+
+        /* Responsif untuk HP */
+        @media (max-width: 480px) {
+            .wa-link-btn {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+      
     </style>
 </head>
 <body class="min-h-screen bg-slate-950 font-sans text-slate-100 selection:bg-cyan-500 selection:text-white">
@@ -333,10 +388,18 @@
             <div class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 tracking-wide mb-4">
                 Travel & Transport
             </div>
+            
+            <footer class="footer-portfolio">
             <p class="text-slate-500 text-sm mb-6">Perjalanan Aman, Nyaman, dan Tepat Waktu</p>
-            <div class="flex justify-center gap-4 text-sm text-slate-600">
-                <span>&copy; <span id="year"></span> Travel & Transport. All rights reserved.</span>
-            </div>
+              <p>Tertarik dengan hasil karya ini?</p>
+        
+        <a href="https://wa.me/6285211379911?text=Halo%20gus_adad%2C%20saya%20melihat%20hasil%20karya%20web%20Anda%20di%20komunitas.%20Saya%20sangat%20tertarik%20dan%20ingin%20berkonsultasi%20untuk%20pembuatan%20proyek%20yang%20serupa.%20Bisa%20dibantu%3F" 
+           target="_blank" 
+           class="wa-link-btn">
+            Hubungi gus_adad
+        </a>
+
+        <span class="copyright">© 2026 Developed by gus_adad • All Rights Reserved</span>
         </div>
     </footer>
 
