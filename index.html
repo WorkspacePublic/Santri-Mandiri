@@ -3,259 +3,379 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel & Transport - Perjalanan Aman, Nyaman, dan Tepat Waktu</title>
     
-    <!-- SEO META DATA -->
-    <title>Santri Mandiri | Yasri Rifa'i | SM Trans Travel Pangandaran</title>
-    <meta name="description" content="Santri Mandiri oleh Yasri Rifa'i menghadirkan SM Trans. Layanan Travel Amanah rute Pangandaran-Bandung, Pangandaran-Jakarta, dan Bandara Kertajati (BIJB). Jemput di rumah, antar sampai tujuan.">
-    <meta name="keywords" content="Santri Mandiri, Yasri Rifa'i, SM Trans, Travel Pangandaran Bandung, Travel Pangandaran Jakarta, Travel Bandara Kertajati, Travel Pangandaran Bekasi, Travel Pangandaran Tangerang">
-    <meta name="author" content="Yasri Rifa'i">
-    
-    <!-- Open Graph (WhatsApp, Facebook sharing) -->
-   <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.facebook.com/share/18VNf2oFfE/?mibextid=wwXIfr">
-    <meta property="og:title" content="Yasri Rifa'i | Travel Amanah & Terpercaya.">
-    <meta property="og:description" content="Pangandaran - Bandung - Jabodetabek - Kertajati. Pesan sekarang melalui WhatsApp.">
-    <meta property="og:image" content="https://placehold.co/1200x630/0f172a/ffffff?text=SM+Trans+Pangandaran">
-
-    <!-- Twitter -->
-
-    <!-- CSS & Frameworks -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #f8fafc;
+            font-family: 'Inter', sans-serif;
         }
-
-        .gradient-text {
-            background: linear-gradient(to right, #3b82f6, #2563eb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-section {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        }
-
-        .route-card {
-            transition: all 0.3s ease;
-        }
-
-        .route-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-
-        .wa-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 100;
-            background-color: #25d366;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 700;
-            text-decoration: none;
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="min-h-screen bg-slate-950 font-sans text-slate-100 selection:bg-cyan-500 selection:text-white">
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/6282315066201?text=Halo%21%20Untuk%20pemesanan%20SMTrans%2C%20mohon%20isi%3A%0A%0A%F0%9F%91%A4%20Nama%3A%0A%F0%9F%93%B1%20WA%2FTelepon%3A%0A%F0%9F%93%85%20Tanggal%20%26%20Jam%3A%0A%F0%9F%91%A3%20Rute%3A%0A%F0%9F%91%A5%20Jumlah%20Penumpang%3A%0A%F0%9F%93%8D%20Titik%20Jemput%3A%0A%F0%9F%8F%81%20Titik%20Antar%3A%0A%0AAdmin%20akan%20segera%20konfirmasi.
-" class="wa-button">
-        <i class="fab fa-whatsapp text-xl"></i>
-        <span>Pesan Sekarang</span>
-    </a>
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+            <div class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 tracking-wide">
+                Travel & Transport
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#layanan" class="text-sm font-medium hover:text-cyan-400 transition-colors">Layanan Kami</a>
+                <a href="#rute" class="text-sm font-medium hover:text-cyan-400 transition-colors">Rute Populer</a>
+                <a href="#armada" class="text-sm font-medium hover:text-cyan-400 transition-colors">Armada</a>
+                <a href="https://wa.me/6282260311434?text=Halo%20Admin%20Mira,%20saya%20ingin%20bertanya%20seputar%20layanan%20Travel%20&%20Transport." target="_blank" rel="noreferrer" class="px-5 py-2.5 bg-cyan-600 hover:bg-cyan-500 text-white rounded-full text-sm font-semibold transition-all shadow-[0_0_15px_rgba(8,145,178,0.5)]">
+                    Hubungi Kami
+                </a>
+            </div>
 
-    <!-- Header / Navbar -->
-    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex flex-col">
-                <span class="text-xl font-extrabold text-slate-900 tracking-tighter">SM Trans</span>
-                <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest">Santri Mandiri</span>
-            </div>
-            <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-600">
-                <a href="#rute" class="hover:text-blue-600 transition">Rute</a>
-                <a href="#layanan" class="hover:text-blue-600 transition">Layanan</a>
-                <a href="#kontak" class="hover:text-blue-600 transition">Kontak</a>
-            </div>
-            <a href="tel:082315066201" class="text-slate-900 font-bold text-sm bg-slate-100 px-4 py-2 rounded-lg">
-                <i class="fas fa-phone-alt mr-2"></i> 0823-1506-6201
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-200 hover:text-cyan-400 transition-colors">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-slate-900 shadow-xl border-t border-slate-800 flex-col items-center py-6 space-y-4">
+            <a href="#layanan" class="mobile-link text-base font-medium hover:text-cyan-400 transition-colors">Layanan Kami</a>
+            <a href="#rute" class="mobile-link text-base font-medium hover:text-cyan-400 transition-colors">Rute Populer</a>
+            <a href="#armada" class="mobile-link text-base font-medium hover:text-cyan-400 transition-colors">Armada</a>
+            <a href="https://wa.me/6282260311434?text=Halo%20Admin%20Mira,%20saya%20ingin%20bertanya%20seputar%20layanan%20Travel%20&%20Transport." target="_blank" rel="noreferrer" class="mt-4 px-6 py-3 bg-cyan-600 hover:bg-cyan-500 text-white rounded-full text-sm font-semibold transition-all w-3/4 text-center">
+                Hubungi via WhatsApp
             </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section text-white py-20 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                Travel Amanah <br><span class="text-blue-400">Pangandaran - Jakarta - Bandung</span>
+    <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden flex items-center justify-center min-h-[80vh]">
+        <!-- Background Decorative Elements -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-5xl">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-cyan-600/20 rounded-full blur-3xl"></div>
+            <!-- Abstract Road Lines -->
+            <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100 C 20 0 50 0 100 100" fill="none" stroke="currentColor" stroke-width="0.5" class="text-cyan-500" />
+                <path d="M0 50 C 30 100 70 0 100 50" fill="none" stroke="currentColor" stroke-width="0.5" class="text-blue-500" />
+            </svg>
+        </div>
+
+        <div class="container relative z-10 mx-auto px-6 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-slate-800/80 border border-slate-700 text-cyan-400 text-xs md:text-sm font-semibold tracking-wider mb-6">
+                SOLUSI TRANSPORTASI TERBAIK
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+                Travel & <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Transport</span>
             </h1>
-            <p class="text-slate-300 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-                SM Trans mengedepankan nilai kejujuran dan pelayanan untuk kenyamanan perjalanan Anda.
+            <p class="text-xl md:text-2xl text-slate-300 mb-10 max-w-2xl mx-auto font-light italic">
+                "Perjalanan Aman, Nyaman, dan Tepat Waktu"
             </p>
-            <div class="flex flex-wrap justify-center gap-4 font-bold">
-                <a href="#rute" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl transition shadow-lg shadow-blue-500/30">
-                    Lihat Rute Tersedia
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://wa.me/6282260311434?text=Halo%20Admin%20Mira,%20saya%20ingin%20bertanya%20seputar%20layanan%20Travel%20&%20Transport." target="_blank" rel="noreferrer" class="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-full font-bold transition-all transform hover:scale-105 shadow-[0_10px_20px_rgba(8,145,178,0.3)]">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    Pesan Sekarang
                 </a>
-                <a href="https://wa.me/6282315066201" class="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl transition border border-white/20">
-                    Konsultasi Gratis
+                <a href="#layanan" class="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white rounded-full font-bold transition-all border border-slate-700 hover:border-slate-600">
+                    Lihat Layanan
                 </a>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Rute List -->
-    <section id="rute" class="py-20 px-6">
-        <div class="max-w-6xl mx-auto">
+    <!-- Rute Populer Section -->
+    <section id="rute" class="py-20 bg-slate-900 border-y border-slate-800">
+        <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-extrabold text-slate-900 mb-4 uppercase tracking-tight">Rute Utama & Jadwal</h2>
-                <div class="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Rute <span class="text-cyan-400">Populer</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-400">Menjangkau berbagai kota dan destinasi utama untuk kebutuhan Anda.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Rute 1 -->
-                <div class="route-card bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
-                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-map-marker-alt text-xl"></i>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+                
+                <!-- Destinasi 1 -->
+                <div class="group bg-slate-800/50 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(8,145,178,0.15)] overflow-hidden flex flex-col">
+                    <div class="relative aspect-square overflow-hidden bg-slate-800">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60 z-10"></div>
+                        <img src="rute-pangandaran.jpg" alt="Rute Pangandaran" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x400/1e293b/38bdf8?text=Pangandaran'">
+                        <div class="absolute top-4 right-4 z-20 bg-slate-900/90 backdrop-blur-sm p-2.5 rounded-full border border-slate-700 shadow-lg group-hover:border-cyan-500/50 transition-colors">
+                            <i data-lucide="palmtree" class="w-5 h-5 text-cyan-400"></i>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-extrabold mb-2">Pangandaran - Bandung</h3>
-                    <p class="text-slate-500 text-sm mb-6">Pemberangkatan pagi & malam. Lewat jalur utama dengan driver berpengalaman.</p>
-                    <ul class="space-y-3 mb-8 text-sm font-semibold text-slate-700">
-                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Door to Door Service</li>
-                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Full AC & Reclining Seat</li>
-                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Driver Ramah (Santri)</li>
-                    </ul>
-                    <a href="https://wa.me/6282315066201?text=Halo%20SM%20Trans,%20mau%20pesan%20rute%20Pangandaran%20Bandung" class="block text-center bg-slate-900 text-white py-4 rounded-2xl hover:bg-blue-600 transition">Booking Sekarang</a>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-slate-100 mb-2 group-hover:text-cyan-400 transition-colors">Pangandaran</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Nikmati perjalanan nyaman ke destinasi pantai dan wisata alam memukau.</p>
+                    </div>
                 </div>
 
-                <!-- Rute 2 -->
-                <div class="route-card bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
-                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-city text-xl"></i>
+                <!-- Destinasi 2 -->
+                <div class="group bg-slate-800/50 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(8,145,178,0.15)] overflow-hidden flex flex-col">
+                    <div class="relative aspect-square overflow-hidden bg-slate-800">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60 z-10"></div>
+                        <img src="bandung.jpg" alt="Rute Bandung" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x400/1e293b/38bdf8?text=Bandung'">
+                        <div class="absolute top-4 right-4 z-20 bg-slate-900/90 backdrop-blur-sm p-2.5 rounded-full border border-slate-700 shadow-lg group-hover:border-cyan-500/50 transition-colors">
+                            <i data-lucide="building-2" class="w-5 h-5 text-cyan-400"></i>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-extrabold mb-2">Pangandaran - Jakarta</h3>
-                    <p class="text-slate-500 text-sm mb-6">Melayani wilayah Bekasi, Tangerang, Depok. Perjalanan nyaman via tol.</p>
-                    <ul class="space-y-3 mb-8 text-sm font-semibold text-slate-700">
-                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Area Jabodetabek</li>
-                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Armada Terawat</li>
-                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Tepat Waktu</li>
-                    </ul>
-                    <a href="https://wa.me/6282315066201?text=Halo%20SM%20Trans,%20mau%20pesan%20rute%20Pangandaran%20Jakarta" class="block text-center bg-slate-900 text-white py-4 rounded-2xl hover:bg-blue-600 transition">Booking Sekarang</a>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-slate-100 mb-2 group-hover:text-cyan-400 transition-colors">Bandung</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Akses cepat dan aman ke kota kembang untuk liburan atau urusan bisnis.</p>
+                    </div>
                 </div>
 
-                <!-- Rute 3 -->
-                <div class="route-card bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
-                    <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-plane-departure text-xl"></i>
+                <!-- Destinasi 3 -->
+                <div class="group bg-slate-800/50 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(8,145,178,0.15)] overflow-hidden flex flex-col">
+                    <div class="relative aspect-square overflow-hidden bg-slate-800">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60 z-10"></div>
+                        <img src="jabodetabek.jpg" alt="Rute Jabodetabek" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x400/1e293b/38bdf8?text=Jabodetabek'">
+                        <div class="absolute top-4 right-4 z-20 bg-slate-900/90 backdrop-blur-sm p-2.5 rounded-full border border-slate-700 shadow-lg group-hover:border-cyan-500/50 transition-colors">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-cyan-400"></i>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-extrabold mb-2">Pangandaran - Kertajati</h3>
-                    <p class="text-slate-500 text-sm mb-6">Antar jemput khusus Bandara BIJB Kertajati. Aman mengejar jadwal penerbangan.</p>
-                    <ul class="space-y-3 mb-8 text-sm font-semibold text-slate-700">
-                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Drop Off Bandara</li>
-                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Bagasi Luas</li>
-                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Antar Jemput</li>
-                    </ul>
-                    <a href="https://wa.me/6282315066201?text=Halo%20SM%20Trans,%20mau%20pesan%20rute%20Pangandaran%20Kertajati" class="block text-center bg-slate-900 text-white py-4 rounded-2xl hover:bg-blue-600 transition">Booking Sekarang</a>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-slate-100 mb-2 group-hover:text-cyan-400 transition-colors">Jabodetabek</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Mobilitas tanpa batas di pusat bisnis dan hiburan metropolitan.</p>
+                    </div>
+                </div>
+
+                <!-- Destinasi 4 -->
+                <div class="group bg-slate-800/50 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(8,145,178,0.15)] overflow-hidden flex flex-col">
+                    <div class="relative aspect-square overflow-hidden bg-slate-800">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60 z-10"></div>
+                        <img src="bandara.jpg" alt="Rute Bandara" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x400/1e293b/38bdf8?text=Bandara'">
+                        <div class="absolute top-4 right-4 z-20 bg-slate-900/90 backdrop-blur-sm p-2.5 rounded-full border border-slate-700 shadow-lg group-hover:border-cyan-500/50 transition-colors">
+                            <i data-lucide="plane" class="w-5 h-5 text-cyan-400"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-slate-100 mb-2 group-hover:text-cyan-400 transition-colors">Bandara</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Layanan antar-jemput bandara tepat waktu agar tidak tertinggal pesawat.</p>
+                    </div>
+                </div>
+
+                <!-- Destinasi 5 -->
+                <div class="group bg-slate-800/50 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(8,145,178,0.15)] overflow-hidden flex flex-col">
+                    <div class="relative aspect-square overflow-hidden bg-slate-800">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60 z-10"></div>
+                        <img src="majalengka.jpg" alt="Rute Majalengka" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x400/1e293b/38bdf8?text=Majalengka'">
+                        <div class="absolute top-4 right-4 z-20 bg-slate-900/90 backdrop-blur-sm p-2.5 rounded-full border border-slate-700 shadow-lg group-hover:border-cyan-500/50 transition-colors">
+                            <i data-lucide="mountain" class="w-5 h-5 text-cyan-400"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-slate-100 mb-2 group-hover:text-cyan-400 transition-colors">Majalengka</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Perjalanan mudah ke bandara Kertajati dan berbagai area sekitarnya.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan Kami Section -->
+    <section id="layanan" class="py-24 relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Layanan <span class="text-blue-400">Kami</span></h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+                    <p class="mt-4 text-slate-400 max-w-xl">Kami menyediakan berbagai pilihan armada dan layanan transportasi untuk memenuhi segala kebutuhan perjalanan Anda.</p>
+                </div>
+                <a href="https://wa.me/6282260311434?text=Halo%20Admin%20Mira,%20saya%20ingin%20bertanya%20seputar%20layanan%20Travel%20&%20Transport." target="_blank" rel="noreferrer" class="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold group transition-colors">
+                    Konsultasi Layanan <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Layanan 1 -->
+                <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-1 rounded-2xl group hover:from-cyan-500/20 hover:to-blue-600/20 transition-all duration-300">
+                    <div class="bg-slate-900 rounded-xl p-6 h-full border border-slate-800 group-hover:border-transparent transition-colors flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-cyan-500 group-hover:to-blue-600 transition-all shadow-lg">
+                            <i data-lucide="bus" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-slate-200 group-hover:text-white">Travel Reguler</h3>
+                    </div>
+                </div>
+
+                <!-- Layanan 2 -->
+                <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-1 rounded-2xl group hover:from-cyan-500/20 hover:to-blue-600/20 transition-all duration-300">
+                    <div class="bg-slate-900 rounded-xl p-6 h-full border border-slate-800 group-hover:border-transparent transition-colors flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-cyan-500 group-hover:to-blue-600 transition-all shadow-lg">
+                            <i data-lucide="car" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-slate-200 group-hover:text-white">Charter Mobil</h3>
+                    </div>
+                </div>
+
+                <!-- Layanan 3 -->
+                <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-1 rounded-2xl group hover:from-cyan-500/20 hover:to-blue-600/20 transition-all duration-300">
+                    <div class="bg-slate-900 rounded-xl p-6 h-full border border-slate-800 group-hover:border-transparent transition-colors flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-cyan-500 group-hover:to-blue-600 transition-all shadow-lg">
+                            <i data-lucide="plane-takeoff" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-slate-200 group-hover:text-white">Antar Jemput Bandara</h3>
+                    </div>
+                </div>
+
+                <!-- Layanan 4 -->
+                <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-1 rounded-2xl group hover:from-cyan-500/20 hover:to-blue-600/20 transition-all duration-300">
+                    <div class="bg-slate-900 rounded-xl p-6 h-full border border-slate-800 group-hover:border-transparent transition-colors flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-cyan-500 group-hover:to-blue-600 transition-all shadow-lg">
+                            <i data-lucide="package" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-slate-200 group-hover:text-white">Paket Barang & Dokumen</h3>
+                    </div>
+                </div>
+
+                <!-- Layanan 5 -->
+                <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-1 rounded-2xl group hover:from-cyan-500/20 hover:to-blue-600/20 transition-all duration-300">
+                    <div class="bg-slate-900 rounded-xl p-6 h-full border border-slate-800 group-hover:border-transparent transition-colors flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-cyan-500 group-hover:to-blue-600 transition-all shadow-lg">
+                            <i data-lucide="users" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-slate-200 group-hover:text-white">Acara Keluarga / Rombongan</h3>
+                    </div>
+                </div>
+
+                <!-- Layanan 6 -->
+                <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-1 rounded-2xl group hover:from-cyan-500/20 hover:to-blue-600/20 transition-all duration-300">
+                    <div class="bg-slate-900 rounded-xl p-6 h-full border border-slate-800 group-hover:border-transparent transition-colors flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-cyan-500 group-hover:to-blue-600 transition-all shadow-lg">
+                            <i data-lucide="plane-landing" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-slate-200 group-hover:text-white">Drop In - Drop Out Bandara</h3>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mengapa Memilih Kami -->
-    <section class="bg-slate-900 py-20 px-6 text-white overflow-hidden relative">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div>
-                <span class="text-blue-400 font-bold uppercase tracking-widest text-xs">Nilai Santri Mandiri</span>
-                <h2 class="text-3xl font-extrabold mt-4 mb-8 leading-tight">Perjalanan Bukan Sekadar Berpindah Tempat, Tapi Soal Kepercayaan.</h2>
-                <div class="space-y-6">
-                    <div class="flex gap-4">
-                        <div class="w-10 h-10 flex-shrink-0 bg-white/10 rounded-lg flex items-center justify-center text-blue-400">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg">Keamanan (Safety First)</h4>
-                            <p class="text-slate-400 text-sm">Unit kendaraan selalu dalam kondisi prima dengan pengecekan rutin berkala.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="w-10 h-10 flex-shrink-0 bg-white/10 rounded-lg flex items-center justify-center text-blue-400">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg">Integritas (Amanah)</h4>
-                            <p class="text-slate-400 text-sm">Dikelola oleh Santri Mandiri, kami memastikan layanan yang jujur tanpa biaya tersembunyi.</p>
-                        </div>
-                    </div>
+    <!-- Armada Kami Section (Galeri Mobil) -->
+    <section id="armada" class="py-20 bg-slate-900/50 border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Armada <span class="text-cyan-400">Kami</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-400">Kendaraan prima, bersih, dan terawat untuk menjamin kenyamanan perjalanan Anda.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Foto Mobil 1 -->
+                <div class="relative group overflow-hidden rounded-2xl border border-slate-700 aspect-square shadow-lg">
+                    <div class="absolute inset-0 bg-cyan-900/10 group-hover:bg-transparent transition-colors z-10 duration-300"></div>
+                    <img src="image1.jpg" alt="Armada Mobil 1" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x600/1e293b/38bdf8?text=Foto+Mobil+1'">
+                </div>
+                
+                <!-- Foto Mobil 2 -->
+                <div class="relative group overflow-hidden rounded-2xl border border-slate-700 aspect-square shadow-lg">
+                    <div class="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors z-10 duration-300"></div>
+                    <img src="image2.jpg" alt="Armada Mobil 2" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x600/1e293b/38bdf8?text=Foto+Mobil+2'">
                 </div>
             </div>
-            <div class="relative">
-                <div class="bg-blue-600/20 absolute inset-0 blur-3xl -z-10 rounded-full"></div>
-                <div class="p-8 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-sm">
-                    <p class="italic text-slate-300 mb-6 font-medium">"Kami berkomitmen membangun ekonomi mandiri santri melalui sektor transportasi. Setiap perjalanan Anda mendukung keberlanjutan kemandirian kami."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center font-extrabold">YR</div>
-                        <div>
-                            <p class="font-bold">Yasri Rifa'i</p>
-                            <p class="text-xs text-slate-500 font-semibold uppercase">SM Trans</p>
-                        </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact Section -->
+    <section class="py-12 bg-gradient-to-r from-cyan-900/40 to-blue-900/40 border-y border-slate-800 relative overflow-hidden">
+        <!-- Decorative background for CTA -->
+        <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-cyan-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="bg-white rounded-3xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 max-w-4xl mx-auto shadow-[0_20px_40px_rgba(0,0,0,0.3)] transform -translate-y-20 mt-10">
+                <div class="flex items-center gap-6">
+                    <div class="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-[#25D366]/30 animate-pulse">
+                        <i data-lucide="message-circle" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <div>
+                        <p class="text-slate-500 font-medium text-sm md:text-base uppercase tracking-wider mb-1">Hubungi Langsung</p>
+                        <h3 class="text-2xl md:text-3xl font-bold text-slate-900">Yasri Rifa'i</h3>
+                        <p class="text-xl md:text-2xl font-bold text-slate-700 mt-1">
+                            WhatsApp: <span class="text-[#25D366]">082260311434</span>
+                        </p>
                     </div>
                 </div>
+                
+                <a href="https://wa.me/6282315066201?text=Halo%21%20Untuk%20pemesanan%20SMTrans%2C%20mohon%20isi%3A%0A%0A%F0%9F%91%A4%20Nama%3A%0A%F0%9F%93%B1%20WA%2FTelepon%3A%0A%F0%9F%93%85%20Tanggal%20%26%20Jam%3A%0A%F0%9F%91%A3%20Rute%3A%0A%F0%9F%91%A5%20Jumlah%20Penumpang%3A%0A%F0%9F%93%8D%20Titik%20Jemput%3A%0A%F0%9F%8F%81%20Titik%20Antar%3A%0A%0AAdmin%20akan%20segera%20konfirmasi." target="_blank" rel="noreferrer" class="w-full md:w-auto px-8 py-4 bg-[#25D366] hover:bg-[#1ebd5a] text-white text-center rounded-xl font-bold text-lg transition-all transform hover:-translate-y-1 shadow-lg shadow-[#25D366]/40 flex items-center justify-center gap-2">
+                    Chat Sekarang
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white pt-20 pb-10 px-6 border-t border-slate-100">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-            <div class="md:col-span-2">
-                <h3 class="text-2xl font-extrabold mb-4">SM Trans</h3>
-                <p class="text-slate-500 text-sm leading-relaxed max-w-sm">
-                    Layanan transportasi darat di bawah manajemen Santri Mandiri oleh Yasri Rifa'i. Kami melayani travel reguler, kirim paket cepat, dan charter mobil area Jawa Barat & Jakarta.
-                </p>
+    <footer class="bg-slate-950 py-10 text-center border-t border-slate-900">
+        <div class="container mx-auto px-6">
+            <div class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 tracking-wide mb-4">
+                Travel & Transport
             </div>
-            <div>
-                <h4 class="font-extrabold text-slate-900 mb-6 uppercase text-xs tracking-widest">Kontak Kami</h4>
-                <ul class="text-sm text-slate-600 space-y-4">
-                    <li><i class="fas fa-phone mr-2 text-blue-600"></i> 0823-1506-6201</li>
-                    <li><i class="fab fa-whatsapp mr-2 text-green-500"></i> Hubungi WhatsApp</li>
-                    <li><i class="fas fa-map-marker-alt mr-2 text-red-500"></i> Pangandaran, Jawa Barat</li>
-                </ul>
+            <p class="text-slate-500 text-sm mb-6">Perjalanan Aman, Nyaman, dan Tepat Waktu</p>
+            <div class="flex justify-center gap-4 text-sm text-slate-600">
+                <span>&copy; <span id="year"></span> Travel & Transport. All rights reserved.</span>
             </div>
-            <div>
-                <h4 class="font-extrabold text-slate-900 mb-6 uppercase text-xs tracking-widest">Media Sosial</h4>
-                <div class="flex gap-4 text-slate-400">
-                    <a href="#" class="hover:text-blue-600 transition"><i class="fab fa-facebook-f text-xl"></i></a>
-                    <a href="#" class="hover:text-pink-600 transition"><i class="fab fa-instagram text-xl"></i></a>
-                    <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-twitter text-xl"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="max-w-6xl mx-auto pt-8 border-t border-slate-50 text-center">
-            <p class="text-xs text-slate-400 font-bold uppercase tracking-[0.3em]">
-                &copy; 2024 Santri Mandiri | Yasri Rifa'i | SM Trans
-            </p>
         </div>
     </footer>
 
+    <!-- Interactive Scripts -->
     <script>
-        // Smooth scroll untuk navigasi
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-slate-900/95', 'backdrop-blur-md', 'shadow-lg', 'py-4');
+                navbar.classList.remove('bg-transparent', 'py-6');
+            } else {
+                navbar.classList.add('bg-transparent', 'py-6');
+                navbar.classList.remove('bg-slate-900/95', 'backdrop-blur-md', 'shadow-lg', 'py-4');
+            }
+        });
+
+        // Mobile Menu Toggle logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMobileMenuOpen = false;
+
+        function toggleMobileMenu() {
+            isMobileMenuOpen = !isMobileMenuOpen;
+            if (isMobileMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                mobileMenuBtn.innerHTML = '<i data-lucide="x" class="w-6 h-6"></i>';
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                mobileMenuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+            }
+            // Re-initialize icons inside the dynamically changed button content
+            lucide.createIcons();
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMobileMenuOpen) toggleMobileMenu();
             });
         });
     </script>
