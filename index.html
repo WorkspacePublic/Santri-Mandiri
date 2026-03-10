@@ -3,26 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- SEO META DATA -->
-    <title>SM Trans Travel Pangandaran</title>
+     <title>SM Trans Travel Pangandaran</title>
     <meta name="description" content="Santri Mandiri oleh Yasri Rifa'i menghadirkan SM Trans. Layanan Travel Amanah rute Pangandaran-Bandung, Pangandaran-Jakarta, dan Bandara Kertajati (BIJB). Jemput di rumah, antar sampai tujuan.">
     <meta name="keywords" content="Santri Mandiri, Yasri Rifa'i, SM Trans, Travel Pangandaran Bandung, Travel Pangandaran Jakarta, Travel Bandara Kertajati, Travel Pangandaran Bekasi, Travel Pangandaran Tangerang">
     <meta name="author" content="Syadad Nabil Mudzafar">
     
-    <!-- Open Graph (WhatsApp, Facebook sharing) -->
-   <meta property="og:type" content="website">
+    <meta property="og:type" content="website">
     <meta property="og:url" content="https://workspacepublic.github.io/Santri-Mandiri">
     <meta property="og:title" content="Yasri Rifa'i | Travel Amanah & Terpercaya.">
     <meta property="og:description" content="Pangandaran - Bandung - Jabodetabek - Kertajati. Pesan sekarang melalui WhatsApp.">
     <meta property="og:image" content="image2.jpg">
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
@@ -32,8 +27,8 @@
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
-            }
-           .copyright {
+        }
+        .copyright {
             margin-top: 25px;
             font-size: 12px;
             color: #475569;
@@ -47,19 +42,16 @@
                 padding: 10px 20px;
             }
         }
-      
     </style>
 </head>
 <body class="min-h-screen bg-slate-950 font-sans text-slate-100 selection:bg-cyan-500 selection:text-white">
 
-    <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
         <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
             <div class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 tracking-wide">
                 Travel & Transport
             </div>
             
-            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 items-center">
                 <a href="#layanan" class="text-sm font-medium hover:text-cyan-400 transition-colors">Layanan Kami</a>
                 <a href="#rute" class="text-sm font-medium hover:text-cyan-400 transition-colors">Rute Populer</a>
@@ -69,13 +61,11 @@
                 </a>
             </div>
 
-            <!-- Mobile Menu Toggle -->
             <button id="mobile-menu-btn" class="md:hidden text-slate-200 hover:text-cyan-400 transition-colors">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-slate-900 shadow-xl border-t border-slate-800 flex-col items-center py-6 space-y-4">
             <a href="#layanan" class="mobile-link text-base font-medium hover:text-cyan-400 transition-colors">Layanan Kami</a>
             <a href="#rute" class="mobile-link text-base font-medium hover:text-cyan-400 transition-colors">Rute Populer</a>
@@ -86,13 +76,10 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden flex items-center justify-center min-h-[80vh]">
-        <!-- Background Decorative Elements -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-5xl">
             <div class="absolute top-20 left-10 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl"></div>
             <div class="absolute bottom-20 right-10 w-96 h-96 bg-cyan-600/20 rounded-full blur-3xl"></div>
-            <!-- Abstract Road Lines -->
             <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <path d="M0 100 C 20 0 50 0 100 100" fill="none" stroke="currentColor" stroke-width="0.5" class="text-cyan-500" />
                 <path d="M0 50 C 30 100 70 0 100 50" fill="none" stroke="currentColor" stroke-width="0.5" class="text-blue-500" />
@@ -121,7 +108,6 @@
         </div>
     </section>
 
-    <!-- Rute Populer Section -->
     <section id="rute" class="py-20 bg-slate-900 border-y border-slate-800">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -131,8 +117,6 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-                
-                <!-- Destinasi 1 -->
                 <div class="group bg-slate-800/50 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(8,145,178,0.15)] overflow-hidden flex flex-col">
                     <div class="relative aspect-square overflow-hidden bg-slate-800">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60 z-10"></div>
@@ -147,7 +131,6 @@
                     </div>
                 </div>
 
-                <!-- Destinasi 2 -->
                 <div class="group bg-slate-800/50 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(8,145,178,0.15)] overflow-hidden flex flex-col">
                     <div class="relative aspect-square overflow-hidden bg-slate-800">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60 z-10"></div>
@@ -162,7 +145,6 @@
                     </div>
                 </div>
 
-                <!-- Destinasi 3 -->
                 <div class="group bg-slate-800/50 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(8,145,178,0.15)] overflow-hidden flex flex-col">
                     <div class="relative aspect-square overflow-hidden bg-slate-800">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60 z-10"></div>
@@ -177,7 +159,6 @@
                     </div>
                 </div>
 
-                <!-- Destinasi 4 -->
                 <div class="group bg-slate-800/50 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(8,145,178,0.15)] overflow-hidden flex flex-col">
                     <div class="relative aspect-square overflow-hidden bg-slate-800">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60 z-10"></div>
@@ -192,7 +173,6 @@
                     </div>
                 </div>
 
-                <!-- Destinasi 5 -->
                 <div class="group bg-slate-800/50 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(8,145,178,0.15)] overflow-hidden flex flex-col">
                     <div class="relative aspect-square overflow-hidden bg-slate-800">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60 z-10"></div>
@@ -206,12 +186,10 @@
                         <p class="text-slate-400 text-sm leading-relaxed">Perjalanan mudah ke bandara Kertajati dan berbagai area sekitarnya.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Layanan Kami Section -->
     <section id="layanan" class="py-24 relative">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -226,7 +204,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Layanan 1 -->
                 <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-1 rounded-2xl group hover:from-cyan-500/20 hover:to-blue-600/20 transition-all duration-300">
                     <div class="bg-slate-900 rounded-xl p-6 h-full border border-slate-800 group-hover:border-transparent transition-colors flex items-center gap-4">
                         <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-cyan-500 group-hover:to-blue-600 transition-all shadow-lg">
@@ -236,7 +213,6 @@
                     </div>
                 </div>
 
-                <!-- Layanan 2 -->
                 <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-1 rounded-2xl group hover:from-cyan-500/20 hover:to-blue-600/20 transition-all duration-300">
                     <div class="bg-slate-900 rounded-xl p-6 h-full border border-slate-800 group-hover:border-transparent transition-colors flex items-center gap-4">
                         <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-cyan-500 group-hover:to-blue-600 transition-all shadow-lg">
@@ -246,7 +222,6 @@
                     </div>
                 </div>
 
-                <!-- Layanan 3 -->
                 <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-1 rounded-2xl group hover:from-cyan-500/20 hover:to-blue-600/20 transition-all duration-300">
                     <div class="bg-slate-900 rounded-xl p-6 h-full border border-slate-800 group-hover:border-transparent transition-colors flex items-center gap-4">
                         <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-cyan-500 group-hover:to-blue-600 transition-all shadow-lg">
@@ -256,7 +231,6 @@
                     </div>
                 </div>
 
-                <!-- Layanan 4 -->
                 <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-1 rounded-2xl group hover:from-cyan-500/20 hover:to-blue-600/20 transition-all duration-300">
                     <div class="bg-slate-900 rounded-xl p-6 h-full border border-slate-800 group-hover:border-transparent transition-colors flex items-center gap-4">
                         <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-cyan-500 group-hover:to-blue-600 transition-all shadow-lg">
@@ -266,7 +240,6 @@
                     </div>
                 </div>
 
-                <!-- Layanan 5 -->
                 <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-1 rounded-2xl group hover:from-cyan-500/20 hover:to-blue-600/20 transition-all duration-300">
                     <div class="bg-slate-900 rounded-xl p-6 h-full border border-slate-800 group-hover:border-transparent transition-colors flex items-center gap-4">
                         <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-cyan-500 group-hover:to-blue-600 transition-all shadow-lg">
@@ -276,7 +249,6 @@
                     </div>
                 </div>
 
-                <!-- Layanan 6 -->
                 <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-1 rounded-2xl group hover:from-cyan-500/20 hover:to-blue-600/20 transition-all duration-300">
                     <div class="bg-slate-900 rounded-xl p-6 h-full border border-slate-800 group-hover:border-transparent transition-colors flex items-center gap-4">
                         <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-cyan-500 group-hover:to-blue-600 transition-all shadow-lg">
@@ -289,7 +261,6 @@
         </div>
     </section>
 
-    <!-- Armada Kami Section (Galeri Mobil) -->
     <section id="armada" class="py-20 bg-slate-900/50 border-t border-slate-800">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -299,13 +270,11 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Foto Mobil 1 -->
                 <div class="relative group overflow-hidden rounded-2xl border border-slate-700 aspect-square shadow-lg">
                     <div class="absolute inset-0 bg-cyan-900/10 group-hover:bg-transparent transition-colors z-10 duration-300"></div>
                     <img src="image1.jpg" alt="Armada Mobil 1" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x600/1e293b/38bdf8?text=Foto+Mobil+1'">
                 </div>
                 
-                <!-- Foto Mobil 2 -->
                 <div class="relative group overflow-hidden rounded-2xl border border-slate-700 aspect-square shadow-lg">
                     <div class="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors z-10 duration-300"></div>
                     <img src="image2.jpg" alt="Armada Mobil 2" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x600/1e293b/38bdf8?text=Foto+Mobil+2'">
@@ -314,9 +283,7 @@
         </div>
     </section>
 
-    <!-- CTA / Contact Section -->
     <section class="py-12 bg-gradient-to-r from-cyan-900/40 to-blue-900/40 border-y border-slate-800 relative overflow-hidden">
-        <!-- Decorative background for CTA -->
         <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-cyan-500/20 rounded-full blur-3xl"></div>
         <div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl"></div>
 
@@ -342,22 +309,19 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-slate-950 py-10 text-center border-t border-slate-900">
         <div class="container mx-auto px-6">
             <div class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 tracking-wide mb-4">
                 Travel & Transport
             </div>
             
-
-        <span class="copyright">© 2026 Developed by <a href="https://wa.me/6285211379911?text=Halo%20gus_adad%2C%20saya%20melihat%20hasil%20karya%20web%20Anda%20di%20komunitas.%20Saya%20sangat%20tertarik%20dan%20ingin%20berkonsultasi%20untuk%20pembuatan%20proyek%20yang%20serupa.%20Bisa%20dibantu%3F">
+        <span class="copyright">© <span id="year">2026</span> Developed by <a href="https://wa.me/6285211379911?text=Halo%20gus_adad%2C%20saya%20melihat%20hasil%20karya%20web%20Anda%20di%20komunitas.%20Saya%20sangat%20tertarik%20dan%20ingin%20berkonsultasi%20untuk%20pembuatan%20proyek%20yang%20serupa.%20Bisa%20dibantu%3F">
     gus_adad
 </a>
  • All Rights Reserved</span>
         </div>
     </footer>
 
-    <!-- Interactive Scripts -->
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
